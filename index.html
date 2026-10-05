@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WebMaker Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Web<span>Maker</span> <small>PRO</small></div>
+  <div class="pagebar">
+    <select id="pageSelect"></select>
+    <button id="newPageBtn">＋ Pagina</button>
+    <button id="renamePageBtn">Naam wijzigen</button>
+    <button id="deletePageBtn" class="danger">Pagina verwijderen</button>
+  </div>
+  <div class="toolbar">
+    <button id="previewBtn">Voorbeeld</button>
+    <button id="saveBtn" class="primary">Opslaan</button>
+    <button id="downloadBtn" class="primary">Website downloaden</button>
+  </div>
+</header>
+
+<main class="app">
+<aside class="sidebar">
+  <h2>Onderdelen</h2>
+  <p class="muted">Voeg blokken toe aan de geselecteerde pagina.</p>
+  <button class="add-block" data-type="hero"><b>Hero</b><span>Titel + knop</span></button>
+  <button class="add-block" data-type="text"><b>Tekst</b><span>Tekstblok</span></button>
+  <button class="add-block" data-type="image"><b>Afbeelding</b><span>Afbeelding</span></button>
+  <button class="add-block" data-type="button"><b>Knop</b><span>Call-to-action</span></button>
+  <button class="add-block" data-type="cards"><b>Kaarten</b><span>Drie kaarten</span></button>
+  <button class="add-block" data-type="contact"><b>Contact</b><span>Contactblok</span></button>
+  <hr>
+  <h2>Websitekleuren</h2>
+  <label>Primaire kleur<input id="primaryColor" type="color"></label>
+  <label>Accentkleur<input id="accentColor" type="color"></label>
+  <label>Achtergrond<input id="siteBg" type="color"></label>
+  <label>Tekstkleur<input id="siteText" type="color"></label>
+  <button id="resetColors" class="secondary full">Standaardkleuren</button>
+</aside>
+
+<section class="workspace">
+  <div class="canvas-wrap"><div id="canvas" class="canvas"></div></div>
+</section>
+
+<aside class="properties">
+  <h2>Eigenschappen</h2>
+  <p id="emptyState" class="muted">Selecteer een onderdeel om het te bewerken.</p>
+  <div id="editor" hidden>
+    <label>Tekst / inhoud<textarea id="contentInput" rows="4"></textarea></label>
+    <label>Knoptekst<input id="buttonTextInput"></label>
+    <label>Link<input id="linkInput" placeholder="https://... of /pagina.html"></label>
+    <label>Afbeelding URL<input id="imageInput" placeholder="https://..."></label>
+    <label>Blokkleur<input id="bgInput" type="color"></label>
+    <label>Tekstkleur<input id="colorInput" type="color"></label>
+    <button id="deleteBtn" class="danger full">Onderdeel verwijderen</button>
+  </div>
+</aside>
+</main>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
